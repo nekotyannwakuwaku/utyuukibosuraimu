@@ -1,0 +1,395 @@
+/* スクロール禁止設定 */
+
+html, body {
+    overflow: hidden;
+  }
+
+/* アニメーションコーナー */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+    40% {
+        transform: translate(-50%, -30%);
+    }
+
+    60% {
+        transform: translate(-50%, -40%);
+    }
+}
+
+
+
+/* 通常サイトのサイズ */
+
+html,
+body {
+    overflow: hidden;
+}
+
+body {
+    font-family: "Silkscreen", sans-serif;
+    background-color: rgb(51, 29, 23);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* タイトル画面 */
+/* スタートボタンのスタイル */
+#start-button {
+    position: fixed;
+    /* 固定配置 */
+    top: 78vh;
+    /* 上部に配置 */
+    left: 50%;
+    /* 左右中央に配置 */
+    transform: translateX(-50%);
+    /* 水平方向の中央に移動 */
+    width: 30vh;
+    /* 横幅を全体に広げる */
+    height: auto;
+    z-index: 10;
+    /* 他の要素よりも前面に表示 */
+}
+
+#start-button:hover {
+    opacity: 0.8;
+}
+
+/* ロゴに関するスタイル */
+.rogo {
+    position: fixed;
+    /* 固定配置 */
+    top: 5vh;
+    /* 上部に配置 */
+    left: 50%;
+    /* 左右中央に配置 */
+    transform: translateX(-50%);
+    /* 水平方向の中央に移動 */
+    width: 50vw;
+    /* 横幅を全体に広げる */
+    z-index: 9;
+    /* 他の要素よりも前面に表示 */
+}
+
+/* あそびかたに関するスタイル */
+.howtoplay {
+    position: fixed;
+    /* 固定配置 */
+    top: 72vh;
+    /* 上部に配置 */
+    left: 50%;
+    /* 左右中央に配置 */
+    transform: translateX(-50%);
+    /* 水平方向の中央に移動 */
+    width: 30vw;
+    /* 横幅を全体に広げる */
+    z-index: 2;
+    /* 他の要素よりも前面に表示 */
+}
+
+/* タイトル画面のスライム */
+.mainkyarakuta {
+    position: fixed;
+    /* 固定配置 */
+    top: 40vh;
+    /* 上部に配置 */
+    left: 50%;
+    /* 左右中央に配置 */
+    transform: translate(-50%, -50%);
+    /* 水平方向および垂直方向の中央に移動 */
+    width: 40vw;
+    /* 最大幅をビューポートの幅に設定 */
+    height: auto;
+    /* 高さを自動に設定 */
+    z-index: 1;
+    /* 他の要素よりも前面に表示 */
+    animation: bounce 2s infinite;
+}
+
+
+#countdown {
+    position: fixed;
+    /* 固定配置 */
+    top: 49vh;
+    /* 上部に配置 */
+    left: 50%;
+    /* 左右中央に配置 */
+    transform: translate(-50%, -50%);
+    /* 水平方向および垂直方向の中央に移動 */
+    font-size: 40vw;
+    /* 大きなフォントサイズを設定 */
+    color: #F8FFDB;
+    /* 文字色を赤に設定 */
+    z-index: 11;
+    /* 他の要素よりも前面に表示 */
+    padding: 50vh 50vw;
+    background-color: rgba(51, 29, 23, 0.7);
+}
+
+/* タップする画像の初期スタイル */
+#tap-image {
+    position: fixed;
+    top: 70vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.1s, transform 0.1s;
+    z-index: 2;
+    user-select: none;
+}
+
+
+
+
+/* タイマーのスタイル */
+#timer {
+    position: fixed;
+    /* 固定配置 */
+    left: 50%;
+    /* 左右中央に配置 */
+    transform: translateX(-50%);
+    /* 水平方向の中央に移動 */
+    margin-top: 12vh;
+    padding: 2vh;
+    border: solid;
+    border-radius: 20px;
+    z-index: 1;
+    color: #F8FFDB;
+    background-color: rgb(51, 29, 23);
+    font-size: 3vw;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* 数値によって変わる背景 */
+
+#game-screen {
+
+    width: 500px;
+    height: 820px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#result-screen {
+    width: 500px;
+    height: 820px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* リザルト画面のスタイル */
+/* リセットボタンの設定 */
+#restart-button {
+    position: fixed;
+    /* 固定配置 */
+    top: 72vh;
+    /* 上部に配置 */
+    left: 50%;
+    /* 左右中央に配置 */
+    transform: translateX(-50%);
+    /* 水平方向の中央に移動 */
+    width: 30vh;
+    /* 横幅を全体に広げる */
+    height: auto;
+    z-index: 10;
+    /* 他の要素よりも前面に表示 */
+}
+
+#restart-button:hover {
+    opacity: 0.8;
+}
+
+
+
+
+/* スマホサイズ */
+@media screen and (max-width: 768px) {
+
+    body {
+        font-family: "Silkscreen", sans-serif;
+        background-color: rgb(51, 29, 23);
+    }
+
+    /* タイトル画面 */
+    /* スタートボタンのスタイル */
+    #start-button {
+        position: fixed;
+        /* 固定配置 */
+        top: 72vh;
+        /* 上部に配置 */
+        left: 50%;
+        /* 左右中央に配置 */
+        transform: translateX(-50%);
+        /* 水平方向の中央に移動 */
+        width: 30vh;
+        /* 横幅を全体に広げる */
+        height: auto;
+        z-index: 10;
+        /* 他の要素よりも前面に表示 */
+    }
+
+    #start-button:hover {
+        opacity: 0.8;
+    }
+
+    /* ロゴに関するスタイル */
+    .rogo {
+        position: fixed;
+        /* 固定配置 */
+        top: 13vh;
+        /* 上部に配置 */
+        left: 50%;
+        /* 左右中央に配置 */
+        transform: translateX(-50%);
+        /* 水平方向の中央に移動 */
+        width: 87vw;
+        /* 横幅を全体に広げる */
+        z-index: 9;
+        /* 他の要素よりも前面に表示 */
+    }
+
+    /* あそびかたに関するスタイル */
+    .howtoplay {
+        position: fixed;
+        /* 固定配置 */
+        top: 64vh;
+        /* 上部に配置 */
+        left: 50%;
+        /* 左右中央に配置 */
+        transform: translateX(-50%);
+        /* 水平方向の中央に移動 */
+        width: 100vw;
+        /* 横幅を全体に広げる */
+        z-index: 2;
+        /* 他の要素よりも前面に表示 */
+    }
+
+    /* タイトル画面のスライム */
+    .mainkyarakuta {
+        position: fixed;
+        /* 固定配置 */
+        top: 40vh;
+        /* 上部に配置 */
+        left: 50%;
+        /* 左右中央に配置 */
+        transform: translate(-50%, -50%);
+        /* 水平方向および垂直方向の中央に移動 */
+        width: 90vw;
+        /* 最大幅をビューポートの幅に設定 */
+        height: auto;
+        /* 高さを自動に設定 */
+        z-index: 1;
+        /* 他の要素よりも前面に表示 */
+        animation: bounce 2s infinite;
+    }
+
+
+    #countdown {
+        position: fixed;
+        /* 固定配置 */
+        top: 49vh;
+        /* 上部に配置 */
+        left: 50%;
+        /* 左右中央に配置 */
+        transform: translate(-50%, -50%);
+        /* 水平方向および垂直方向の中央に移動 */
+        font-size: 40vw;
+        /* 大きなフォントサイズを設定 */
+        color: #F8FFDB;
+        /* 文字色を赤に設定 */
+        z-index: 11;
+        /* 他の要素よりも前面に表示 */
+        padding: 50vh 50vw;
+        background-color: rgba(51, 29, 23, 0.7);
+    }
+
+    /* タップする画像の初期スタイル */
+    #tap-image {
+        position: fixed;
+        /* 固定配置 */
+        top: 70vh;
+        /* 上部に配置 */
+        left: 50%;
+        /* 左右中央に配置 */
+        transform: translate(-50%, -50%);
+        /* 水平方向および垂直方向の中央に移動 */
+        transition: width 0.1s;
+        z-index: 2;
+        user-select: none;
+    }
+
+
+    /* タイマーのスタイル */
+    #timer {
+        position: fixed;
+        /* 固定配置 */
+        left: 50%;
+        /* 左右中央に配置 */
+        transform: translateX(-50%);
+        /* 水平方向の中央に移動 */
+        margin-top: 12vh;
+        padding: 2vh;
+        border: solid;
+        border-radius: 20px;
+        z-index: 1;
+        color: #F8FFDB;
+        background-color: rgb(51, 29, 23);
+        font-size: 5vw;
+        white-space: nowrap;
+        user-select: none;
+    }
+
+    /* 数値によって変わる背景 */
+    #game-screen {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #result-screen {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    /* リザルト画面のスタイル */
+    /* リセットボタンの設定 */
+    #restart-button {
+        position: fixed;
+        /* 固定配置 */
+        top: 72vh;
+        /* 上部に配置 */
+        left: 50%;
+        /* 左右中央に配置 */
+        transform: translateX(-50%);
+        /* 水平方向の中央に移動 */
+        width: 30vh;
+        /* 横幅を全体に広げる */
+        height: auto;
+        z-index: 10;
+        /* 他の要素よりも前面に表示 */
+    }
+
+    #restart-button:hover {
+        opacity: 0.8;
+    }
+}
