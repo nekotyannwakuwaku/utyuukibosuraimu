@@ -106,9 +106,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ゲーム画面の背景画像を更新する関数
     function updateGameBackgroundImage(tapCount) {
-        if (tapCount >= 170) {
+        if (tapCount >= 120) {
             gameScreen.style.backgroundImage = 'url("img/h6.png")';
-        } else if (tapCount >= 140) {
+        } else if (tapCount >= 110) {
             gameScreen.style.backgroundImage = 'url("img/h5.png")';
         } else if (tapCount >= 100) {
             gameScreen.style.backgroundImage = 'url("img/h4.png")';
@@ -123,9 +123,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // リザルト画面の背景画像を更新する関数
     function updateResultBackgroundImage(tapCount) {
-        if (tapCount >= 170) {
+        if (tapCount >= 120) {
             resultScreen.style.backgroundImage = 'url("img/r6.png")';
-        } else if (tapCount >= 140) {
+        } else if (tapCount >= 110) {
             resultScreen.style.backgroundImage = 'url("img/r5.png")';
         } else if (tapCount >= 100) {
             resultScreen.style.backgroundImage = 'url("img/r4.png")';
