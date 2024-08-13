@@ -117,6 +117,21 @@ body {
     animation: bounce 2s infinite;
 }
 
+.more {
+    position: fixed;
+    /* 固定配置 */
+    top: 80vh;
+    /* 上部に配置 */
+    left: 70%;
+    /* 水平方向および垂直方向の中央に移動 */
+    width: 7vw;
+    /* 最大幅をビューポートの幅に設定 */
+    height: auto;
+    /* 高さを自動に設定 */
+    z-index: 20;
+    /* 他の要素よりも前面に表示 */
+    animation: bounce 2s infinite;
+}
 
 #countdown {
     position: fixed;
@@ -295,6 +310,22 @@ body {
         z-index: 1;
         /* 他の要素よりも前面に表示 */
         animation: bounce 2s infinite;
+    }
+
+
+    .more {
+        position: fixed;
+        /* 固定配置 */
+        top:75vh;
+        /* 上部に配置 */
+        left: 85%;
+        /* 左右中央に配置 */
+        transform: translateX(-50%);
+        /* 水平方向の中央に移動 */
+        width: 15vw;
+        /* 横幅を全体に広げる */
+        z-index: 2;
+        /* 他の要素よりも前面に表示 */
     }
 
 

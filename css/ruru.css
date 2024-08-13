@@ -1,0 +1,62 @@
+html,
+body {
+    overflow: hidden;
+}
+
+body {
+    font-family: "Silkscreen", sans-serif;
+    background-color: rgb(51, 29, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ruru {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 120vh;
+    z-index: 1;
+}
+
+.batu {
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 37vh;
+    width: 50px; 
+    z-index: 2;
+}
+
+
+@media screen and (max-width: 768px) {
+.ruru {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw; 
+    z-index: 1;
+}
+
+.batu {
+    position: fixed;
+    top: 2vh;
+    left: 16vw;
+    transform: translateX(-50%);
+    width: 30px;
+    height: auto;
+    z-index: 10;
+}
+/* .batu {
+    position: fixed;
+    top: 10vh;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 10vw; 
+    z-index: 2;
+} */
+}
