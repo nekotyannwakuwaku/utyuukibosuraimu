@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ゲーム画面の背景画像を更新する関数
     function updateGameBackgroundImage(tapCount) {
-        if (tapCount >= 200) {
+        if (tapCount >= 170) {
             gameScreen.style.backgroundImage = 'url("img/h6.png")';
         } else if (tapCount >= 140) {
             gameScreen.style.backgroundImage = 'url("img/h5.png")';
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // リザルト画面の背景画像を更新する関数
     function updateResultBackgroundImage(tapCount) {
-        if (tapCount >= 200) {
+        if (tapCount >= 170) {
             resultScreen.style.backgroundImage = 'url("img/r6.png")';
         } else if (tapCount >= 140) {
             resultScreen.style.backgroundImage = 'url("img/r5.png")';
