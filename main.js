@@ -1,10 +1,9 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
     // 各画面の要素を取得
     const titleScreen = document.getElementById('title-screen');
     const gameScreen = document.getElementById('game-screen');
+    const gegi = document.getElementById('gegi'); // ゲージ画像要素を取得
     const resultScreen = document.getElementById('result-screen');
     const startButton = document.getElementById('start-button');
     const restartButton = document.getElementById('restart-button');
@@ -48,8 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         countdown.textContent = '3';
         tapImage.style.width = '20vh'; // 画像のサイズを初期化
         gameScreen.style.backgroundImage = 'url("img/h1.png")'; // 初期背景画像を設定
-
-        resultScreen.style.backgroundImage = 'url("img/r1.png")'; // 初期背景画像を設定
+        gegi.src = 'img/l1.png'; // 初期ゲージ画像を設定
 
         tapImage.removeEventListener('click', tapImageHandler); // カウントダウン中は画像のクリックイベントを無効化
 
@@ -98,19 +96,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const newSize = 20 + tapCount * 0.8; // 新しい画像サイズを計算
         tapImage.style.width = newSize + 'vh'; // 画像のサイズを変更
 
-
-        // 背景画像を更新
+        // 背景画像とゲージ画像を更新
         updateGameBackgroundImage(tapCount);
+        updateGameGaugeImage(tapCount);
         upSound.play();
     }
 
     // ゲーム画面の背景画像を更新する関数
     function updateGameBackgroundImage(tapCount) {
-        if (tapCount >= 120) {
+        if (tapCount >= 150) {
             gameScreen.style.backgroundImage = 'url("img/h6.png")';
-        } else if (tapCount >= 110) {
+        } else if (tapCount >= 120) {
             gameScreen.style.backgroundImage = 'url("img/h5.png")';
-        } else if (tapCount >= 100) {
+        } else if (tapCount >= 90) {
             gameScreen.style.backgroundImage = 'url("img/h4.png")';
         } else if (tapCount >= 60) {
             gameScreen.style.backgroundImage = 'url("img/h3.png")';
@@ -121,13 +119,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // ゲージの画像を更新する関数
+    function updateGameGaugeImage(tapCount) {
+        if (tapCount >= 150) {
+            gegi.src = 'img/l6.png';
+        } else if (tapCount >= 120) {
+            gegi.src = 'img/l5.png';
+        } else if (tapCount >= 90) {
+            gegi.src = 'img/l4.png';
+        } else if (tapCount >= 60) {
+            gegi.src = 'img/l3.png';
+        } else if (tapCount >= 40) {
+            gegi.src = 'img/l2.png';
+        } else {
+            gegi.src = 'img/l1.png';
+        }
+    }
+
     // リザルト画面の背景画像を更新する関数
     function updateResultBackgroundImage(tapCount) {
-        if (tapCount >= 120) {
+        if (tapCount >= 150) {
             resultScreen.style.backgroundImage = 'url("img/r6.png")';
-        } else if (tapCount >= 110) {
+        } else if (tapCount >= 120) {
             resultScreen.style.backgroundImage = 'url("img/r5.png")';
-        } else if (tapCount >= 100) {
+        } else if (tapCount >= 90) {
             resultScreen.style.backgroundImage = 'url("img/r4.png")';
         } else if (tapCount >= 60) {
             resultScreen.style.backgroundImage = 'url("img/r3.png")';
