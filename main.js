@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const gameScreen = document.getElementById('game-screen');
     const gegi = document.getElementById('gegi'); // ゲージ画像要素を取得
     const resultScreen = document.getElementById('result-screen');
+    const finalScoreElement = document.getElementById('final-score'); // リザルト画面のスコア要素を取得
     const startButton = document.getElementById('start-button');
     const restartButton = document.getElementById('restart-button');
     const tapImage = document.getElementById('tap-image');
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let tapCount = 0;  // タップ回数
     let countdownInterval; // カウントダウンのインターバルID
     let gameInterval; // ゲーム時間のインターバルID
+    const totalTaps = 200; // ゲームでの最大タップ数
 
     // ゲーム開始ボタンのクリックイベントを設定
     startButton.addEventListener('click', startGame);
@@ -104,9 +106,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ゲーム画面の背景画像を更新する関数
     function updateGameBackgroundImage(tapCount) {
-        if (tapCount >= 150) {
+        if (tapCount >= 200) {
             gameScreen.style.backgroundImage = 'url("img/h6.png")';
-        } else if (tapCount >= 120) {
+        } else if (tapCount >= 150) {
             gameScreen.style.backgroundImage = 'url("img/h5.png")';
         } else if (tapCount >= 90) {
             gameScreen.style.backgroundImage = 'url("img/h4.png")';
@@ -121,9 +123,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ゲージの画像を更新する関数
     function updateGameGaugeImage(tapCount) {
-        if (tapCount >= 150) {
+        if (tapCount >= 200) {
             gegi.src = 'img/l6.png';
-        } else if (tapCount >= 120) {
+        } else if (tapCount >= 150) {
             gegi.src = 'img/l5.png';
         } else if (tapCount >= 90) {
             gegi.src = 'img/l4.png';
@@ -158,6 +160,11 @@ document.addEventListener('DOMContentLoaded', function () {
         syukuSound.play();
         tapImage.removeEventListener('click', tapImageHandler); // ゲーム終了時に画像のクリックイベントを無効化
         updateResultBackgroundImage(tapCount); // リザルト画面の背景画像を更新
+
+        // 残りタップ数（200 - ゲーム中のタップ数）を計算して表示
+        const remainingTaps = totalTaps - tapCount;
+        finalScoreElement.textContent = remainingTaps > 0 ? remainingTaps : 0; // スコアを表示
+
         gameScreen.style.display = 'none'; // ゲーム画面を隠す
         resultScreen.style.display = 'block'; // リザルト画面を表示
 

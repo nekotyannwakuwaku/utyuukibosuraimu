@@ -198,6 +198,18 @@ body {
     opacity: 0.8;
 }
 
+.score{
+    position: fixed;
+    top: 90vh;
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 4vw;
+    
+    height: auto;
+    z-index: 10;
+    color: #de3e16;
+
+}
 
 
 
@@ -352,5 +364,18 @@ body {
 
     #restart-button:hover {
         opacity: 0.8;
+    }
+
+    .score{
+        position: fixed;
+        top: 93vh;
+        left: 30%;
+        transform: translateX(-50%);
+        font-size: 4vw;
+        
+        height: auto;
+        z-index: 10;
+        color: #de3e16;
+    
     }
 }

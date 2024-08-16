@@ -43,7 +43,10 @@ body {
 
 .batu {
     position: fixed;
-    left: 10px;
+    left: 50px; 
+    top: 8px;
+    width: 20px;
+    top: 10vh;
     z-index: 10;
 }
 }
