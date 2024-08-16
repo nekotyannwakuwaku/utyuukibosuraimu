@@ -200,10 +200,10 @@ body {
 
 .score{
     position: fixed;
-    top: 90vh;
-    left: 30%;
+    bottom: 3vh;
+    left: 10%;
     transform: translateX(-50%);
-    font-size: 4vw;
+    font-size: 20px;
     
     height: auto;
     z-index: 10;
@@ -368,8 +368,8 @@ body {
 
     .score{
         position: fixed;
-        top: 93vh;
-        left: 30%;
+        top: 70vh;
+        left: 50%;
         transform: translateX(-50%);
         font-size: 4vw;
         
