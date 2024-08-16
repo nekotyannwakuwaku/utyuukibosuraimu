@@ -140,9 +140,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // リザルト画面の背景画像を更新する関数
     function updateResultBackgroundImage(tapCount) {
-        if (tapCount >= 150) {
+        if (tapCount >= 200) {
             resultScreen.style.backgroundImage = 'url("img/r6.png")';
-        } else if (tapCount >= 120) {
+        } else if (tapCount >= 150) {
             resultScreen.style.backgroundImage = 'url("img/r5.png")';
         } else if (tapCount >= 90) {
             resultScreen.style.backgroundImage = 'url("img/r4.png")';
