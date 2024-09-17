@@ -64,10 +64,10 @@ body {
 /* ロゴに関するスタイル */
 .rogo {
     position: fixed;
-    top: 5vh;
+    top: 2vh;
     left: 50%;
     transform: translateX(-50%);
-    width: 50vw;
+    width: 40vh;
     z-index: 9;
 }
 
@@ -84,7 +84,7 @@ body {
 /* タイトル画面のスライム */
 .mainkyarakuta {
     position: fixed;
-    top: 40vh;
+    top: 50vh;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40vw;
@@ -240,10 +240,10 @@ body {
     /* ロゴに関するスタイル */
     .rogo {
         position: fixed;
-        top: 13vh;
+        top: 0.2vh;
         left: 50%;
         transform: translateX(-50%);
-        width: 87vw;
+        width: 75vw;
         z-index: 9;
     }
 
@@ -260,7 +260,7 @@ body {
     /* タイトル画面のスライム */
     .mainkyarakuta {
         position: fixed;
-        top: 40vh;
+        top: 50vh;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 90vw;
